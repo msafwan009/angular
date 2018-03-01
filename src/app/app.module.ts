@@ -3,16 +3,22 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { BankDataComponent } from './bank-data/bank-data.component';
+import { BankServiceComponent } from './bank-service/bank-service.component';
+import { HttpServiceService } from './http-service.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BankDataComponent,
+    BankServiceComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,HttpClientModule
   ],
-  providers: [],
+  providers: [HttpServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
